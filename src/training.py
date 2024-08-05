@@ -137,10 +137,10 @@ if not is_processed:
 
 total_signal_length = 0
 for index in range(0, len(df_list)):
-    df= df_list [index]
+    df = df_list[index]
     df.ta.bbands(append=True, length=30, std=2)
     df.ta.rsi(append=True, length=14)
-    df["atr"] = ta.atr(low = df.Low, close = df.Close, high = df.High, length=14)
+    df["atr"] = ta.atr(low=df.Low, close=df.Close, high=df.High, length=14)
     df.rename(columns={
         'BBL_30_2.0': 'bbl', 'BBM_30_2.0': 'bbm', 'BBU_30_2.0': 'bbh', 'RSI_14': 'rsi'
     }, inplace=True)
@@ -149,7 +149,7 @@ for index in range(0, len(df_list)):
     df['bb_width'] = (df['bbh'] - df['bbl']) / df['bbm']
     apply_total_signal(df=df, rsi_threshold_low=30, rsi_threshold_high=70, bb_width_threshold=0.001)
     df['pointpos'] = df.apply(lambda row: pointpos(row), axis=1)
-    total_signal_length += len(df[df['TotalSignal'] != 0] )
+    total_signal_length += len(df[df['TotalSignal'] != 0])
     plot_chart_with_indicators(df, ticker_list[index], st=500)
 
 print("Total Signal Count Is: {i}", total_signal_length)
