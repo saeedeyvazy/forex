@@ -10,7 +10,7 @@ tickers_list = ['USDJPY=X', 'USDCHF=X', 'GC=F', 'EURUSD=X', 'BMW.DE']
 
 download_path = './downloads'
 start_time_for_gathering_data = '2011-01-01'
-end_time_for_gathering_data = datetime.today().strftime('%Y-%m-%d')
+end_time_for_gathering_data = '2024-05-11' #datetime.today().strftime('%Y-%m-%d')
 interval_for_gathering_time = '1d'
 
 
@@ -150,6 +150,10 @@ for index in range(0, len(df_list)):
     apply_total_signal(df=df, rsi_threshold_low=30, rsi_threshold_high=70, bb_width_threshold=0.001)
     df['pointpos'] = df.apply(lambda row: pointpos(row), axis=1)
     total_signal_length += len(df[df['TotalSignal'] != 0])
+
+    print('Ticker : ' + ticker_list[index] + ' \n' )
+    print(df[df['TotalSignal'] != 0])
+
     plot_chart_with_indicators(df, ticker_list[index], st=500)
 
 print("Total Signal Count Is: {i}", total_signal_length)
