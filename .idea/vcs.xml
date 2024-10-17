@@ -1,51 +1,6 @@
-<ns2:CBI767NRM xmlns:ns2="urn:ISC:xsd:CBI767NRM.2013">
-    <Header>
-        <SenderID>KHMIIRTH001</SenderID>
-        <ReceiverID>BMJIIRTHSHB</ReceiverID>
-        <REFID>BLGKHMI1403051000000012602240</REFID>
-        <LGCODE>1001803659432231</LGCODE>
-        <RetCode>BLG203</RetCode>
-        <OPRDesc>LGCODE WAS NOT FOUND IN DATABASE</OPRDesc>
-    </Header>
-    <MT767>
-        <F20a>
-            <F20>1001803659432231</F20>
-        </F20a>
-        <F22a>
-            <F22B>EXTD</F22B>
-        </F22a>
-        <F30a>
-            <F30>14030420</F30>
-        </F30a>
-        <F40a_1>
-            <F40b>
-                <D>Extendable</D>
-            </F40b>
-        </F40a_1>
-        <F31a>
-            <F31D>14030920</F31D>
-        </F31a>
-        <F50a>
-            <F50>
-                <MobileNo>09111111111</MobileNo>
-            </F50>
-        </F50a>
-        <F59a>
-            <F59>
-                <MobileNo>09111111111</MobileNo>
-            </F59>
-        </F59a>
-        <F32a>
-            <F32>600000000,</F32>
-        </F32a>
-        <F77a>
-            <F77C>
-                <Narrative>
-                    <Line>352475950</Line>
-                    <Line>چک تاریخ‌دار (امانی) تعهدات</Line>
-                    <Line>1001</Line>
-                </Narrative>
-            </F77C>
-        </F77a>
-    </MT767>
-</ns2:CBI767NRM>
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+</project>
